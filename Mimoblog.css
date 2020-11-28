@@ -1,5 +1,5 @@
 
-body {
+body  {
   color: #555;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
@@ -127,7 +127,7 @@ a:hover {
 }
 
 .post .post-content {
-  max width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 60px 0;
   text-align: center;
@@ -165,7 +165,7 @@ a:hover {
   font-weight: bold;
 
   text-transform: uppercase;
-  letter-spacing: 0.1e,;
+  letter-spacing: 0.1em;
 }
 
 h1, h2, h3, h4 {
@@ -183,7 +183,15 @@ p {
 }
 
 #contentAbout {
-  border: 5px solid gray
+  border: 5px solid gray;
   padding: 50px;
   margin: 100px;
+}
+
+#links {
+  font-size: 100px
+}
+
+.links {
+  text-align: center;
 }
