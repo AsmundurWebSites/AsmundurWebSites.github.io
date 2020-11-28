@@ -188,10 +188,11 @@ p {
   margin: 100px;
 }
 
-#links {
-  font-size: 100px
+#links a {
+  font-size: 300px
 }
 
 .links {
   text-align: center;
+
 }
