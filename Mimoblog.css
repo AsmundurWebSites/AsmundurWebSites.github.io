@@ -85,13 +85,18 @@ body  {
   padding: 50px 0;
 }
 
+#footerLinks {
+  background-color: #2f2f2f;
+  padding: 50px 0;
+}
+
 .column {
   min-width: 300px;
   display: inline-block;
   vertical-align: top;
 }
 
-.columnAbout {
+.columnAbout .columnLinks {
   min-width: 300px;
   display: inline-block;
   vertical-align: top;
@@ -188,11 +193,15 @@ p {
   margin: 100px;
 }
 
-#links a {
-  font-size: 300px
+#linksPage  {
+  font-size: 300px;
+
 }
 
-.links {
+.linksPage {
   text-align: center;
+}
 
+.linkss {
+  text-align: center;
 }
