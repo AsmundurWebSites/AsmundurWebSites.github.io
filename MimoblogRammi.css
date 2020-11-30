@@ -1,0 +1,53 @@
+
+
+#header a:hover {
+    color: #222;
+  }
+   
+  #footerRammi {
+    background-color: #2f2f2f;
+    padding: 50px 0;
+  }
+  
+  .columnRammi {
+    min-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  #footerRammi h4 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  #footerRammi p {
+    color: white;
+  }
+
+  a {
+    color: #1abc9c;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #F6A623;
+  }
+  
+  
+  h1, h2, h3, h4 {
+    color: #333;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  #content {
+    border: 5px solid gray;
+    padding: 50px;
+    margin: 200px;
+  }
+
+  
+ 
