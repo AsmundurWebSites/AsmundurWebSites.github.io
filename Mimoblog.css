@@ -5,20 +5,7 @@ body  {
   font-family: 'Montserrat', sans-serif;
 }
 
-.bodyAbout {
-  color: #555;
-  margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
-
-}
-
 #header {
-  background-color: #1abc9c;
-  height: 150px;
-  line-height: 150px;
-}
-
-#headerAbout {
   background-color: #1abc9c;
   height: 150px;
   line-height: 150px;
@@ -48,11 +35,6 @@ body  {
   text-align: center;
 }
 
-.containerAbout {
-  max-width: 100%;
-  text-align: center;
-}
-
 #header a {
   color: white;
   text-decoration: none;
@@ -60,43 +42,18 @@ body  {
   letter-spacing: 0.1em;
 }
 
-#headerAbout a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
 
 #header a:hover {
   color: #222;
 }
 
-#headerAbout a:hover {
-  color: #222;
-}
 
 #footer {
   background-color: #2f2f2f;
   padding: 50px 0;
 }
 
-#footerAbout {
-  background-color: #2f2f2f;
-  padding: 50px 0;
-}
-
-#footerLinks {
-  background-color: #2f2f2f;
-  padding: 50px 0;
-}
-
 .column {
-  min-width: 300px;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.columnAbout .columnLinks {
   min-width: 300px;
   display: inline-block;
   vertical-align: top;
@@ -109,16 +66,6 @@ body  {
 }
 
 #footer p {
-  color: white;
-}
-
-#footerAbout h4 {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.1em
-}
-
-#footerAbout p {
   color: white;
 }
 
@@ -145,18 +92,11 @@ a:hover {
   border-radius: 50%;
 }
 
-.About .About-content {
+.About {
   max-width: 800px;
   margin: 0 auto;
   padding: 30px 0;
   text-align: center;
-}
-
-.about-author img {
-  width: 100px;
-  height: 100px;
-  vertical-align: middle;
-  border-radius: 50%;
 }
 
 .post-author span {
@@ -185,12 +125,6 @@ p {
   border: 5px solid gray;
   padding: 50px;
   margin: 200px;
-}
-
-#contentAbout {
-  border: 5px solid gray;
-  padding: 50px;
-  margin: 100px;
 }
 
 #linksPage  {

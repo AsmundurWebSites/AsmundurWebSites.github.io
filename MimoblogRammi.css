@@ -1,9 +1,59 @@
 
+body {
+  color: #555;
+  margin: 0 auto;
+}
+#headerRammi {
+  background-color: #1abc9c;
+  height: 150px;
+  line-height: 150px;
+}
 
-#header a:hover {
+
+#header-titleRammi{
+  display: block;
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 20px 20px 20px;
+}
+
+#header-navRammi {
+  display: block;
+  float: right;
+  margin-top: 0;
+}
+
+#header-navRammi li {
+  display: inline;
+  padding:20px 20px 20px 20px;
+}
+
+#headerRammi a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+  #headerRammi a:hover {
     color: #222;
   }
    
+
+  .containerRammi {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .containerRammiMain {
+    max-width: 500px;
+    max-height: 500px;
+    text-align: center;
+    margin: 50px auto 50px auto;
+    padding: 20px 20px 20px 20px;
+  }
+  
+
   #footerRammi {
     background-color: #2f2f2f;
     padding: 50px 0;
@@ -34,20 +84,6 @@
     color: #F6A623;
   }
   
-  
-  h1, h2, h3, h4 {
-    color: #333;
-  }
-  
-  p {
-    line-height: 1.5;
-  }
-  
-  #content {
-    border: 5px solid gray;
-    padding: 50px;
-    margin: 200px;
-  }
 
   
  
