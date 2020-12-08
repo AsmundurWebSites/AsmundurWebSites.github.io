@@ -7,6 +7,14 @@
   <title>Fun </title>
   <link rel="stylesheet" href="MimoblogRammi.css">
   <link rel="import" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <script type="text/javascript">
+  
+  function fn1() {
+    
+    var str= document.getElementById("inptoAlert").value
+      alert ("Value inside the box is:"+str)
+  }
+  </script>
 </head>
 
 <body>
@@ -23,6 +31,11 @@
     </div>
   </div>
   <br>
+  <div class="buttPlace">
+  <input id="inptoAlert" placeholder: Write something>
+  <br>
+  <button onclick="fn1()" id= "btn1">Click Me</button>
+  </div>
   <div class="containerRammiMain">
     <h1>Inception</h1>
 

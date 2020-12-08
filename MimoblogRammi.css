@@ -88,6 +88,11 @@ body {
   a:hover {
     color: #F6A623;
   }
+
+  .buttPlace {
+    display: flex;
+    flex-direction: column;
+  }
   
 
   
