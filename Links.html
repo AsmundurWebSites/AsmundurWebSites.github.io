@@ -1,39 +1,96 @@
-<<!DOCTYPE html>
-  <<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en" dir="ltr">
-
     <head>
       <meta charset="utf-8">
       <title>Links </title>
       <link rel="stylesheet" href="linksPage.css">
       <link rel="import" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+    
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <style>
+          [v-cloak] {
+              display: none;
+          }
+      </style>
+    
     </head>
 
-    <body>
-      <div id="header">
-        <div class="header">
-          <a id="header-title" href="index.html">My Blog</a>
-          <ul id="header-nav">
-            <li><a href="archPosts.html">Old Posts</a></li>
-            <li><a href="MimoblogAbout.html">About</a></li>
-            <li><a href="Irammi.html">Inception</a></li>
-            <li><a href="Links.html">Links</a></li>
-            <li><a href="mailto:asithor@live.com">Contact</a></li>
-          </ul>
-        </div>
+    <div id="header">
+      <div class="header">
+        <a id="header-title" href="index.html">My Blog</a>
+        <ul id="header-nav">
+          <li><a href="archPosts.html">Old Posts</a></li>
+          <li><a href="MimoblogAbout.html">About</a></li>
+          <li><a href="Irammi.html">Inception</a></li>
+          <li><a href="apiFromNasa.html">Links</a></li>
+          <li><a href="mailto:asithor@live.com">Contact</a></li>
+        </ul>
       </div>
+    </div>
 
-      <div id="links" class="linksPage"></div>
-      <ul id="linksList">
-        <li><a href="AsmundurWebSites.github.io">FIRST WEBSITE</a></li>
-        <li><a href="getmimo.com">MIMO</a></li>
-        <li><a href="atom.io">ATOM</a></li>
-        <li><a href="https://code.visualstudio.com/">STUDIO.V.CODE</a>
-        <li><a href="github.com">GITHUB</a></li>
-        <li><a
-            href="https://flutter.dev/?gclid=CjwKCAiAwrf-BRA9EiwAUWwKXsEDBXT68k-gMytf0IjryGxQqbgi3oF1YGWA_aqvhRdRMXmzeZQ6nBoCUS0QAvD_BwE&gclsrc=aw.ds">FLUTTER</a>
-        </li>
-      </ul>
+    <body>
+      <div id="app">
+        <div class="container">
+            <div class="card mt-5">
+                <h2 class="card-header">Near-Earth Objects</h2>
+                <table class="table">
+                    <thead class="thead-light">
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Close Approach Date</th>
+                        <th>Miss Distance</th>
+                    </thead>
+                    <tbody v-cloak>
+                        <tr v-for="(a, index) in asteroids">
+                            <td>{{index +1}}</td>
+                            <td>{{a.name}}</td>
+                            <td>{{getCloseApproachDate(a)}}</td>
+                            <td>
+                                <ul v-if="a.close_approach_data.length > 0">
+                                    <li v-for="(value, key) in a.close_approach_data[0].miss_distance">
+                                        {{key}}: {{value}}
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>    
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                asteroids: []
+            },
+            created: function () {
+                this.fetchAsteroids();
+            },
+            methods: {
+                fetchAsteroids: function () {
+                    var apiKey = 'lkgI9to0hRizfzk4xTAxtNTTFkkA4Mtq7y1yW5me';
+                    var url = 'https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=' + apiKey;
+                    axios.get(url)
+                        .then(function (res) {
+                            vm.asteroids = res.data.near_earth_objects.slice(0, 10);
+                        });
+                },
+                getCloseApproachDate: function (a) {
+                    if (a.close_approach_data.length > 0) {
+                        return a.close_approach_data[0].close_approach_date;
+                    }
+                    return 'N/A';
+                }
+            }     
+        });        
+    </script>
+
+
+
       <br>
       <div id="footer">
         <div class="container">
@@ -53,3 +110,13 @@
     </body>
 
     </html>
+
+
+
+
+
+
+
+
+
+
