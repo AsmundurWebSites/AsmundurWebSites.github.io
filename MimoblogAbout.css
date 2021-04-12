@@ -12,6 +12,45 @@ html{
     color: darkolivegreen;
 }
 
+
+#headerAbout {
+    background-color: #1abc9c;
+    height: 150px;
+    line-height: 150px;
+  }
+  
+  #header-titleAbout{
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 20px 20px 20px;
+  }
+  
+  #header-navAbout {
+    display: block;
+    float: right;
+    margin-top: 0;
+  }
+  
+  #header-navAbout li {
+    display: inline;
+    padding:20px 20px 20px 20px;
+  }
+
+  
+  #headerAbout a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  #headerAbout a:hover {
+    color: #222;
+  }
+
+
 body {
     color: #343434;
     margin: 0;
